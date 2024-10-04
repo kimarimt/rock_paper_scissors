@@ -1,22 +1,15 @@
+import assets
 from random import randint
 
 
 def main():
-    print('''
-================================
-|      ROCK PAPER SCISSORS     |
-================================
-|       '0' for Rock           |
-|       '1' for Paper          |
-|       '2' for Scissors       |
-================================
-''')
+    print(assets.MENU)
 
     player = int(input('ROCK, PAPER, SCISSORS, SHOOT!: '))
-    print(f'Player chose: {player}')
+    print(f'\nPlayer chose: {assets.GAME_IMAGES[player]}')
 
     computer = randint(0, 2)
-    print(f'Computer chose: {computer}')
+    print(f'\nComputer chose: {assets.GAME_IMAGES[computer]}')
 
     if player == computer:
         print('It\'s a tie!')
